@@ -1,0 +1,2 @@
+include ':works-builder'
+project(':works-builder').projectDir = new File('works-builder/.')
