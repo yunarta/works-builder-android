@@ -21,7 +21,7 @@ repositories {
     }
 }
 
-apply plugin: 'java'
+apply plugin: 'com.android.library'
 
 group 'com.mobilesolutionworks'
 version '1.1.0'
@@ -30,6 +30,27 @@ apply from: ('https://raw.githubusercontent.com/yunarta/works-gradle-script/mast
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
+
+android {
+    resourcePrefix 'works_'
+
+    compileSdkVersion autoCompileSdkVersion(23)
+    buildToolsVersion autoBuildToolsVersion('23.0.2')
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion autoCompileSdkVersion(23)
+        versionCode 1
+        versionName version
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
 
 configurations {
     provided
@@ -57,7 +78,6 @@ worksPublish {
 
     siteUrl = 'https://github.com/yunarta/works-versioning-android'
     gitUrl = 'https://github.com/yunarta/works-versioning-android.git'
-
 }
 
-apply from: 'https://raw.githubusercontent.com/yunarta/works-gradle-script/master/publish-bintray-for-java-lib-nojavadoc.gradle'
+apply from: 'https://raw.githubusercontent.com/yunarta/works-gradle-script/master/publish-bintray-for-android-lib-forced.gradle'
