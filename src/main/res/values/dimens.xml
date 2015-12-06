@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="works_margin64">64dp</dimen>
+    <dimen name="works_margin56">56dp</dimen>
+    <dimen name="works_margin48">48dp</dimen>
+    <dimen name="works_margin40">40dp</dimen>
+    <dimen name="works_margin32">32dp</dimen>
+    <dimen name="works_margin24">24dp</dimen>
+    <dimen name="works_margin16">16dp</dimen>
+    <dimen name="works_margin8">8dp</dimen>
+    <dimen name="works_margin4">4dp</dimen>
+    <dimen name="works_margin2">2dp</dimen>
+</resources>
